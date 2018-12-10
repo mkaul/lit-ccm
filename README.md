@@ -8,23 +8,33 @@ Mixin for LitElement subclasses that adds ccm API functions to the subclass:
 
 ```javascript
 import { LitElement, html } from 'https://unpkg.com/@polymer/lit-element/lit-element.js?module';
-import { ccmix } from 'https://mkaul.github.io/lit-ccm/lit-ccm.js';
+import { ccm } from 'https://ccmjs.github.io/ccm/versions/ccm-18.6.5.mjs';
+import { ccmix } from 'https://mkaul.github.io/lit-ccm/lit-ccm.mjs';
+import { config } from 'https://mkaul.github.io/lit-ccm/config.mjs';
 
-class HelloWorld extends ccmix ( LitElement ) {
+class HelloWorld extends ccmix( config )( LitElement ) {
   /**
    * Define a template for the new element by implementing LitElement's
    * `render` function. `render` must return a lit-html TemplateResult.
    * 
    * The ccmix Mixin will mix the ccm API and the ccm helper functions into the element
    */
-  render(){
+  init(){
+    
+  }
+  
+  ready(){
+    
+  }
+  
+  render(){ // start() within ccm   => conflict !!!
     return html`
       <style>
         :host { display: block; }
         :host([hidden]) { display: none; }
       </style>
       <h1>Hello World</h1>
-      <p>You like lit and <i>ccm</i>.</p>
+      <p>You like lit and you like <i>ccm</i>.</p>
     `;
   }
 }
