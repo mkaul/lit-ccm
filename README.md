@@ -23,7 +23,8 @@ class HelloWorld extends ccmix ( LitElement ) {
         :host { display: block; }
         :host([hidden]) { display: none; }
       </style>
-      <p>You like pie.</p>
+      <h1>Hello World</h1>
+      <p>You like lit and <i>ccm</i>.</p>
     `;
   }
 }
