@@ -1,0 +1,25 @@
+{
+  "name": "lit-ccm",
+  "version": "1.0.0",
+  "description": "LitElement adapter for ccm",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkaul/lit-ccm.git"
+  },
+  "author": "Manfred Kaul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkaul/lit-ccm/issues"
+  },
+  "homepage": "https://mkaul.github.io/lit-ccm/",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "@polymer/lit-element": "latest"
+  },
+  "devDependencies": {
+    "babel-minify": "^0.4.0"
+  }
+}
