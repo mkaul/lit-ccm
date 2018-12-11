@@ -25,7 +25,7 @@ class HelloWorld extends ccmix( ccm, config )( LitElement ) { // or HTMLElement
    */
   
   static get dependencies(){
-    // Array of other components
+    // Array of other components as static property 
   }
   
   init(){
