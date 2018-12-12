@@ -1,7 +1,7 @@
 # lit-ccm
 ## LitElement adapter for ccm
 
-Mixin for LitElement subclasses that adds ccm API functions to the subclass:
+Mixin for HTMLElement or LitElement subclasses that adds ccm API functions to the subclass:
 * init
 * ready
 * start
@@ -9,10 +9,12 @@ Mixin for LitElement subclasses that adds ccm API functions to the subclass:
 ```javascript
 import { LitElement, html, render as lit_render } from 'https://unpkg.com/@polymer/lit-element/lit-element.js?module';
 import { ccm } from 'https://mkaul.github.io/lit-ccm/ccm/versions/ccm-18.6.5.mjs';
-import { ccmix } from 'https://mkaul.github.io/lit-ccm/lit-ccm.mjs';
+import { ccmix } from 'https://mkaul.github.io/lit-ccm/ccmix.mjs';
+import { ccstore } from 'https://mkaul.github.io/lit-ccm/ccstore.mjs';
+import { store } from 'https://mkaul.github.io/lit-ccm/store.mjs';
 import { config } from 'https://mkaul.github.io/lit-ccm/config.mjs';
 
-class HelloWorld extends ccmix( ccm, config )( LitElement ) { // or HTMLElement
+class HelloWorld extends ccmix( ccm, config )( ccstore( store )( LitElement ) ) { // or HTMLElement
   /**
    * Define a template for the new element by implementing LitElement's
    * `render` function. `render` must return a lit-html TemplateResult.
