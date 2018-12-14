@@ -5,6 +5,7 @@
 * [JS Mixin Tutorial](https://javascript.info/mixins)
 * [Mixins in Polymer](https://stackoverflow.com/questions/41839198/applying-behaviors-with-js-mixins-in-polymer-2)
 * [Functional Mixins: Composing Software](https://medium.com/javascript-scene/functional-mixins-composing-software-ffb66d5e731c)
+* [Defining Mixins](https://meowni.ca/posts/polymer-2-cheatsheet/#defining-a-mixin)
 
 ## ccmix for mixing ccm into any subclass of HTMLElement
 
